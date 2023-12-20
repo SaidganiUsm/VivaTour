@@ -212,7 +212,7 @@ header {
 }
 
 .about-us {
-    padding: 200px;
+    padding:  0 200px 200px 200px;
     display: flex;
     align-items: center;
     gap: 50px;
@@ -298,8 +298,9 @@ input {
 }
 
 textarea {
+    background-color: lightgray;
     border-radius: 16px;
-    border: 2px solid black;
+    border: none;
 }
 
 form button {
@@ -327,4 +328,107 @@ footer img {
     width: 30px;
     height: 30px;
 }
+
+
+
+
+.services,
+.photos,
+.about-us,
+.location,
+.contact {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.animated-element.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    /* Styles for screens with a width of 768px or less */
+
+    header {
+        height: 60px;
+    }
+
+    .main-section {
+        height: 768px;
+    }
+
+    .top {
+        padding-left: 20px;
+    }
+
+    .section_2 {
+        padding-top: 100px;
+        padding: 50px;
+        height: auto;
+    }
+
+    .services-section {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .photos,
+    .about-us,
+    .location,
+    .contact {
+        display: flex;
+        flex-direction: column;
+        padding: 50px;
+    }
+
+    .about-us {
+        flex-direction: column;
+    }
+
+    .about-us-photo img {
+        width: 100%;
+        height: auto;
+    }
+
+    .location-info {
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .photos img {
+        width: 100%;
+        height: auto;
+    }
+
+    iframe {
+        padding: 50px;
+        width: auto;
+    }
+
+    .name-email,
+    .email,
+    .massege {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    input,
+    textarea,
+    form button {
+        width: 100%;
+    }
+
+    .form-div {
+        width: 100%;
+    }
+
+    .contact {
+        padding: 20px;
+    }
+}
+
 
